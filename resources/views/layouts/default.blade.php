@@ -7,6 +7,8 @@
 </head>
 <body class="header-light navbar-light navbar-fixed with-topbar withAnimation">
 	@include('includes.header')
+	@include('includes.menu')
+	@include('includes.carousel')
 
 	<section class="call-box bg3">
 	    @yield('content')
