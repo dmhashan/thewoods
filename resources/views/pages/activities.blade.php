@@ -1,4 +1,5 @@
 @extends('layouts.default')
+@section('title', 'Activities')
 @section('content')
     
     <div class="inner">

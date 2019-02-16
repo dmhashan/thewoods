@@ -12,14 +12,14 @@ return [
 			'name' => 'Activities',
 			'url' => '/activities',
 			'type' => 'dropdown',
-			'ref' => 'activities_menu',
+			'ref' => 'activities',
 			'active' => false,
 		],
 		'accommodation' => [
 			'name' => 'Accommodation',
 			'url' => '/accommodation',
 			'type' => 'imagedropdown',
-			'ref' => 'accommodation_menu',
+			'ref' => 'accommodation',
 			'active' => false,
 		],
 		'tours' => [
@@ -32,14 +32,14 @@ return [
 			'name' => 'Conservation',
 			'url' => '/conservation',
 			'type' => 'spandropdown',
-			'ref' => 'conservation_menu',
+			'ref' => 'conservation',
 			'active' => false,
 		],
 		'agriculture' => [
 			'name' => 'Agriculture',
 			'url' => '/agriculture',
 			'type' => 'dropdown',
-			'ref' => 'agriculture_menu',
+			'ref' => 'agriculture',
 			'active' => false,
 		],
 		'contact' => [
@@ -50,7 +50,7 @@ return [
 		],
 	],
 
-	'activities_menu' => [
+	'activities' => [
 		'spiritual' => [
 			'name' => 'Spiritual',
 			'url' => '/activities/spiritual',
@@ -168,7 +168,7 @@ return [
 
 	],
 
-	'accommodation_menu' => [
+	'accommodation' => [
 		'cabana' => [
 			'name' => 'Cabana',
 			'url' => '/accommodation/cabana',
@@ -189,7 +189,7 @@ return [
 		],
 	],
 
-	'conservation_menu' => [
+	'conservation' => [
 		'flora_and_fauna' => [
 			'name' => 'Flora & Fauna',
 			'ref' => 'flora_and_fauna_menu',
@@ -229,7 +229,7 @@ return [
 		],
 	],
 
-	'agriculture_menu' => [
+	'agriculture' => [
 		'plant_propagation_unit' => [
 			'name' => 'Plant Propagation Unit',
 			'url' => '/agriculture/plant-propagation-unit',

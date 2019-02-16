@@ -8,6 +8,7 @@
 <body class="header-light navbar-light navbar-fixed with-topbar withAnimation">
 	@include('includes.header')
 	@include('includes.menu')
+	@include('includes.maintitile')
 
 	    @yield('content')
 

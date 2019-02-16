@@ -64,8 +64,10 @@ Last change:	21 August 2014
 
 -------------------------------------------------------------------*/
 :root {
-  --main-highlight-color: #decd6a;
-  --main-background-color: #524b26;
+  --main-highlight-color: #DCCC54;
+  --main-background-color: #4D461F;
+  --dark-gray-color: #746837;
+  --gray-color: #4D461F;
 }
 
 @font-face {
@@ -5828,7 +5830,7 @@ body.header-light header i.fa {
   color: var(--main-background-color);
 }
 body.header-dark header {
-  background-color: #0d0d0d;
+  background-color: var(--dark-gray-color);
   color: #ffffff;
 }
 body.header-dark header i.fa {
@@ -5887,7 +5889,7 @@ body.navbar-light .navbar {
   background-color: #ffffff;
 }
 body.navbar-dark .navbar {
-  background-color: #262626;
+  background-color: var(--gray-color);
   color: #ffffff;
 }
 body.navbar-dark .navbar .dropdown-menu {
@@ -6471,7 +6473,7 @@ video {
 .media-section {
   display: table;
   width: 100%;
-  background-color: #262626;
+  background-color: var(--gray-color);
   position: relative;
 }
 .media-section video {
@@ -6873,7 +6875,7 @@ video {
    ******* */
 footer.main-footer {
   position: relative;
-  background-color: #262626;
+  background-color: var(--gray-color);
   color: #FFFFFF;
   padding: 50px 0;
 }
@@ -6909,7 +6911,7 @@ footer.main-footer .footer-contacts {
   cursor: pointer;
 }
 .post-footer {
-  background-color: #0d0d0d;
+  background-color: var(--dark-gray-color);
   padding: 25px 0;
   color: #ffffff;
 }
@@ -8175,7 +8177,7 @@ blockquote.type2 .author.white cite {
    ********** */
 .mapToggle {
   font-size: 24px;
-  background-color: #0d0d0d;
+  background-color: var(--dark-gray-color);
   text-align: center;
   text-transform: uppercase;
   display: block;
@@ -9878,7 +9880,7 @@ button.trigger span::before {
     width: 50px;
     top: 10px;
     right: -50px;
-    background-color: #262626;
+    background-color: var(--gray-color);
     height: 50px;
     display: block;
     margin: 0;
@@ -9955,7 +9957,7 @@ button.trigger span::before {
     width: 50px;
     top: 62px;
     right: -50px;
-    background-color: #262626;
+    background-color: var(--gray-color);
     height: 50px;
     display: block;
     padding: 0;
@@ -10174,7 +10176,7 @@ button.trigger span::before {
     overflow-y: hidden;
     overflow-x: hidden;
     max-height: 100%;
-    background: #262626;
+    background: var(--gray-color);
     border-top: none;
     color: #ffffff;
   }
@@ -10191,7 +10193,7 @@ button.trigger span::before {
     max-height: none;
   }
   .navbar-collapse .dropdown-menu {
-    background-color: #262626;
+    background-color: var(--gray-color);
     margin: 0 -15px;
     display: block;
     position: initial;
@@ -10208,7 +10210,7 @@ button.trigger span::before {
     color: #ffffff;
   }
   .navbar-collapse .active > a {
-    color: #262626;
+    color: var(--gray-color);
   }
   .navbar-collapse .nav > li > a {
     padding: 10px 10px 10px 10px;

@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/activities', function () {
+Route::get('/activities/1', function () {
     return view('pages.activities');
 });
 

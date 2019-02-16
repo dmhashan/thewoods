@@ -4,7 +4,7 @@
 <div class="container">
 <!-- Brand and toggle get grouped for better mobile display -->
 <div class="navbar-header hidden-xs">
-    <a class="navbar-brand" href="/"><img src="assets/images/content/logo.png" alt="Corpress Logo"/></a>
+    <a class="navbar-brand" href="{{ URL::asset('/') }}"><img src="{{ URL::asset('assets/images/content/logo.png') }}" alt="Corpress Logo"/></a>
 </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,7 +19,7 @@
         if ($mainlinks['type'] === 'single') {
             ?>
                 <li>
-                    <a href="<?php echo $mainlinks['url']; ?>">
+                    <a href="{{ URL::asset($mainlinks['url']) }}">
                         <?php echo $mainlinks['name']; ?>
                     </a>
                 </li>
@@ -27,8 +27,8 @@
         } else if ($mainlinks['type'] === 'dropdown') {
             ?>
             <li class="dropdown">
-                <a href="<?php echo $mainlinks['url']; ?>" class="dropdown-toggle" data-toggle="dropdown">
-                    <?php echo $mainlinks['name']; ?>
+                <a href="{{ URL::asset($mainlinks['url']) }}" class="dropdown-toggle" data-toggle="dropdown">
+                    {{ $mainlinks['name'] }}
                 <i class="fa fa-fw fa-angle-down"></i></a>
                 <ul class="dropdown-menu yamm-dropdown">
                     <li>
@@ -40,26 +40,26 @@
                                         foreach (Config::get('companymenu.'.$mainlinks['ref']) as $sublinks) {
                                             if ($sublinks['type'] === 'single') {
                                                 ?>
-                                                    <li><a href="<?php echo $sublinks['url']; ?>">
-                                                        <i class="<?php echo $sublinks['icon']; ?>"></i>
-                                                        <?php echo $sublinks['name']; ?>
+                                                    <li><a href="{{ URL::asset($sublinks['url']) }}">
+                                                        <i class="{{ $sublinks['icon'] }}"></i>
+                                                        {{ $sublinks['name'] }}
                                                     </a></li>
                                                 <?php
                                             } else if ($sublinks['type'] === 'dropdown') {
                                                 ?>
                                                     <li class="dropdown-submenu">
-                                                        <a href="<?php echo $sublinks['url']; ?>">
-                                                            <i class="<?php echo $sublinks['icon']; ?>"></i>
-                                                            <?php echo $sublinks['name']; ?>
+                                                        <a href="{{ URL::asset($sublinks['url']) }}">
+                                                            <i class="{{ $sublinks['icon'] }}"></i>
+                                                            {{ $sublinks['name'] }}
                                                         </a>
                                                         <ul class="dropdown-menu">
                                                             <?php
                                                             foreach (Config::get('companymenu.'.$sublinks['ref']) as $atomlinks) {
                                                                 ?>
                                                                     <li>
-                                                                        <a href="<?php echo $atomlinks['url']; ?>">
-                                                                        <i class="<?php echo $atomlinks['icon']; ?>"></i>
-                                                                        <?php echo $atomlinks['name']; ?>
+                                                                        <a href="{{ URL::asset($atomlinks['url']) }}">
+                                                                        <i class="{{ $atomlinks['icon'] }}"></i>
+                                                                        {{ $atomlinks['name'] }}
                                                                         </a>
                                                                     </li>
                                                                 <?php
@@ -77,8 +77,13 @@
                             </div>
                             <div class="row nav-bottom">
                                 <div class="col-md-12">
-                                    <span class="btm-sec"><img src="assets/images/content/logosmall.png" alt="logo" about="Corpress"></span>
-                                    <span class="btm-sec">Conservation</span>
+                                    <span class="btm-sec">
+                                        <img 
+                                            src="{{ URL::asset('assets/images/content/logosmall.png') }}" 
+                                            alt="{{ $mainlinks['name'] }}" 
+                                            about="{{ $mainlinks['name'] }}">
+                                        </span>
+                                    <span class="btm-sec">{{ $mainlinks['name'] }}</span>
                                 </div>
                             </div>
                         </div>
@@ -89,8 +94,8 @@
         } else if ($mainlinks['type'] === 'spandropdown') {
             ?>
             <li class="dropdown">
-                <a href="<?php echo $mainlinks['url']; ?>" class="dropdown-toggle" data-toggle="dropdown">
-                    <?php echo $mainlinks['name']; ?>
+                <a href="{{ URL::asset($mainlinks['url']) }}" class="dropdown-toggle" data-toggle="dropdown">
+                    {{ $mainlinks['name'] }}
                 <i class="fa fa-fw fa-angle-down"></i></a>
                 <ul class="dropdown-menu yamm-dropdown">
                     <li>
@@ -101,7 +106,7 @@
                                     foreach (Config::get('companymenu.'.$mainlinks['ref']) as $spanlinks) {
                                         ?>
                                         <span class="navbar-title">
-                                            <?php echo $spanlinks['name']; ?>
+                                            {{ $spanlinks['name'] }}
                                         </span>
                                         <?php
                                     ?>
@@ -110,26 +115,26 @@
                                         foreach (Config::get('companymenu.'.$spanlinks['ref']) as $sublinks) {
                                             if ($sublinks['type'] === 'single') {
                                                 ?>
-                                                    <li><a href="<?php echo $sublinks['url']; ?>">
-                                                        <i class="<?php echo $sublinks['icon']; ?>"></i>
-                                                        <?php echo $sublinks['name']; ?>
+                                                    <li><a href="{{ URL::asset($sublinks['url']) }}">
+                                                        <i class="{{ $sublinks['icon'] }}"></i>
+                                                        {{ $sublinks['name'] }}
                                                     </a></li>
                                                 <?php
                                             } else if ($sublinks['type'] === 'dropdown') {
                                                 ?>
                                                     <li class="dropdown-submenu">
-                                                        <a href="<?php echo $sublinks['url']; ?>">
-                                                            <i class="<?php echo $sublinks['icon']; ?>"></i>
-                                                            <?php echo $sublinks['name']; ?>
+                                                        <a href="{{ URL::asset($sublinks['url']) }}">
+                                                            <i class="{{ $sublinks['icon'] }}"></i>
+                                                            {{ $sublinks['name'] }}
                                                         </a>
                                                         <ul class="dropdown-menu">
                                                             <?php
                                                             foreach (Config::get('companymenu.'.$sublinks['ref']) as $atomlinks) {
                                                                 ?>
                                                                     <li>
-                                                                        <a href="<?php echo $atomlinks['url']; ?>">
-                                                                        <i class="<?php echo $atomlinks['icon']; ?>"></i>
-                                                                        <?php echo $atomlinks['name']; ?>
+                                                                        <a href="{{ URL::asset($atomlinks['url']) }}">
+                                                                        <i class="{{ $atomlinks['icon'] }}"></i>
+                                                                        {{ $atomlinks['name'] }}
                                                                         </a>
                                                                     </li>
                                                                 <?php
@@ -147,8 +152,13 @@
                             </div>
                             <div class="row nav-bottom">
                                 <div class="col-md-12">
-                                    <span class="btm-sec"><img src="assets/images/content/logosmall.png" alt="logo" about="Corpress"></span>
-                                    <span class="btm-sec">Conservation</span>
+                                    <span class="btm-sec">
+                                        <img 
+                                        src="{{ URL::asset('assets/images/content/logosmall.png') }}" 
+                                        alt="{{ $mainlinks['name'] }}" 
+                                        about="{{ $mainlinks['name'] }}">
+                                    </span>
+                                    <span class="btm-sec">{{ $mainlinks['name'] }}</span>
                                 </div>
                             </div>
                         </div>
@@ -159,8 +169,8 @@
         } else if ($mainlinks['type'] === 'imagedropdown') {
             ?>
             <li class="dropdown">
-                <a href="<?php echo $mainlinks['url']; ?>" class="dropdown-toggle" data-toggle="dropdown">
-                    <?php echo $mainlinks['name']; ?>
+                <a href="{{ URL::asset($mainlinks['url']) }}" class="dropdown-toggle" data-toggle="dropdown">
+                    {{ $mainlinks['name'] }}
                 <i class="fa fa-fw fa-angle-down"></i></a>
                 <ul class="dropdown-menu yamm-dropdown">
                     <li>
@@ -173,11 +183,11 @@
                                             ?>
                                             <div class="col-sm-4">
                                                 <span class="navbar-title">
-                                                    <?php echo $sublinks['name']; ?>
+                                                    {{ $sublinks['name'] }}
                                                 </span>
                                                 <ul class="list-unstyled">
-                                                    <li><a href="<?php echo $sublinks['url']; ?>">
-                                                        <img src="<?php echo $sublinks['src']; ?>" alt="<?php echo $sublinks['name']; ?>"/>
+                                                    <li><a href="{{ URL::asset($sublinks['url']) }}">
+                                                        <img src="{{ URL::asset($sublinks['src']) }}" alt="{{ $sublinks['name'] }}"/>
                                                     </a></li>
                                                 </ul>
                                             </div>
@@ -189,8 +199,13 @@
                             </div>
                             <div class="row nav-bottom">
                                 <div class="col-md-12">
-                                    <span class="btm-sec"><img src="assets/images/content/logosmall.png" alt="logo" about="Corpress"></span>
-                                    <span class="btm-sec">Accommodation</span>
+                                    <span class="btm-sec">
+                                        <img 
+                                            src="{{ URL::asset('assets/images/content/logosmall.png') }}" 
+                                            alt="{{ $mainlinks['name'] }}" 
+                                            about="{{ $mainlinks['name'] }}">
+                                        </span>
+                                    <span class="btm-sec">{{ $mainlinks['name'] }}</span>
                                 </div>
                             </div>
                         </div>
@@ -237,7 +252,7 @@
 <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header visible-xs">
-        <a class="navbar-brand" href="index.html"><img src="assets/images/content/logo.png" alt="Corpress Logo"/></a>
+        <a class="navbar-brand" href="{{ URL::asset('/') }}"><img src="{{ URL::asset('assets/images/content/logo.png') }}" alt="Corpress Logo"/></a>
         <button type="button" class="navbar-toggle" id="sidebar-toggle">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>

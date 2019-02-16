@@ -1,25 +1,25 @@
 <div class="container"></div>
 
-<footer class="main-footer">
+<footer class="main-footer animated" data-fx="fadeIn">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-md-3">
-                <img src="assets/images/content/logofooter.png" alt="Corpress">
+                <img src="{{ URL::asset('assets/images/content/logofooter.png') }}" alt="Corpress">
                 <br>
                 <br>
-                <p><?php echo Config::get('companydetails.theme'); ?></p>
+                <p>{{ Config::get('companydetails.theme') }}</p>
                 <p>
-                    <?php echo Config::get('companydetails.addressinline'); ?>
+                    <?php echo Config::get('companydetails.addressinline') ?>
                     <span class="footer-contacts">
                         <i class="fa fa-fw fa-phone motive"></i>
-                            <?php echo Config::get('companydetails.phone1'); ?>
+                            {{ Config::get('companydetails.phone1') }}
                         <br>
                         <i class="fa fa-fw fa-phone motive"></i>
-                            <?php echo Config::get('companydetails.phone2'); ?>
+                            {{ Config::get('companydetails.phone2') }}
                         <br>
                         <i class="fa fa-fw fa-envelope motive"></i>
-                            <a href="mailto:<?php echo Config::get('companydetails.email'); ?>">
-                            <?php echo Config::get('companydetails.email'); ?>
+                            <a href="mailto:{{ Config::get('companydetails.email') }}">
+                            {{ Config::get('companydetails.email') }}
                         </a>
                     </span>
                 </p>
@@ -30,16 +30,16 @@
                     <div class="widget-inner">
                         <ul>
                             <li class="cat-item cat-item-2">
-                                <a href="/activities" title="Spiritual, Wildlife, Adventure & Art">Activities</a>
+                                <a href="{{ URL::asset('/activities') }}" title="Spiritual, Wildlife, Adventure & Art">Activities</a>
                             </li>
                             <li class="cat-item cat-item-3">
-                                <a href="/conservation" title="Flora & Fauna Pictorial Checklist">Conservation</a>
+                                <a href="{{ URL::asset('/conservation') }}" title="Flora & Fauna Pictorial Checklist">Conservation</a>
                             </li>
                             <li class="cat-item cat-item-4">
-                                <a href="/agriculture" title="Plant Propagation Unit & Permaculture">Agriculture</a>
+                                <a href="{{ URL::asset('/agriculture') }}" title="Plant Propagation Unit & Permaculture">Agriculture</a>
                             </li>
                             <li class="cat-item cat-item-1">
-                                <a href="/accommodation" title="Cabana, Cottage & Bungalow">Accommodation</a>
+                                <a href="{{ URL::asset('/accommodation') }}" title="Cabana, Cottage & Bungalow">Accommodation</a>
                             </li>
                         </ul>
                     </div>
