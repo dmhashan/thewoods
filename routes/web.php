@@ -12,9 +12,29 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
-Route::get('/test', function () {
-    return view('pages.test');
+Route::get('/activities', function () {
+    return view('pages.activities');
+});
+
+Route::get('/accommodation', function () {
+    return view('pages.accommodation');
+});
+
+Route::get('/tours', function () {
+    return view('pages.tours');
+});
+
+Route::get('/conservation', function () {
+    return view('pages.conservation');
+});
+
+Route::get('/agriculture', function () {
+    return view('pages.agriculture');
+});
+
+Route::get('/contact', function () {
+    return view('pages.contact');
 });
