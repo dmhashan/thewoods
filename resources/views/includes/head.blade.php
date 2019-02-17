@@ -27,6 +27,20 @@
     #rev2 {
         height: 840px;
     }
+    .loader {
+        position:fixed; 
+        height:100%; 
+        width:100%; 
+        overflow:hidden; 
+        top:0; 
+        left:0;
+        background: white;
+        z-index: 10000;
+        background-image: url({{ URL::asset('assets/images/content/loader.gif') }});
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
 
 </style>
 

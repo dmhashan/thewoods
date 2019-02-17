@@ -26,3 +26,8 @@
 <script src="{{ URL::asset('assets/js/main.js') }}"></script>
 
 <!-- end scripts -->
+
+<script type="text/javascript">
+	$('#loading_wrap').fadeOut(800).delay(1000).remove();
+	// $('#loading_wrap').remove();
+</script>

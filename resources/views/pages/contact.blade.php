@@ -17,7 +17,7 @@
                                            <i class="fa fa-map-marker fa-lg"></i>
                                        </span>
                                        <span class="table-cell">
-                                           <a class="magnific-popup" data-type="iframe" href="https://maps.google.com/maps?ll=51.5230224,-0.1587735&amp;z=17&amp;q=221B+Baker+St,+Marylebone,+London+NW1+6XE,+UK">10 Milk Street #230 Boston, MA 02108</a>
+                                           {{ Config::get('companydetails.theme') }}
                                        </span>
                            </div>
                        </li>
@@ -27,7 +27,17 @@
                                            <i class="fa fa-phone fa-lg"></i>
                                        </span>
                                        <span class="table-cell">
-                                           +1 123 456 7890
+                                           {{ Config::get('companydetails.phone1') }}
+                                       </span>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="display-table animated" data-time="100" data-fx="fadeInUp" style="animation-delay: .2s;">
+                                       <span class="table-cell">
+                                           <i class="fa fa-phone fa-lg"></i>
+                                       </span>
+                                       <span class="table-cell">
+                                           {{ Config::get('companydetails.phone2') }}
                                        </span>
                            </div>
                        </li>
@@ -47,7 +57,9 @@
                                            <i class="fa fa-envelope fa-lg"></i>
                                        </span>
                                        <span class="table-cell">
-                                           <a href="mailto:example@example.com">example@example.com</a>
+                                           <a 
+                                           href="mailto:{{ Config::get('companydetails.email') }}">
+                                            {{ Config::get('companydetails.email') }}</a>
                                        </span>
                            </div>
                        </li>
